@@ -1,0 +1,46 @@
+body {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+.main{
+    text-align: center;
+    border: 1px solid black; 
+    width: 50%;
+    padding-bottom: 20px;
+    background-color: yellow;
+   
+}
+.container-fluid{
+    margin: 15% 30%;
+    
+}
+.head {
+    text-align: center;
+}
+.content {
+    display: flex;
+    width: 100%;
+    border: 1px solid gray;
+     background-color: white;
+    width: 95%;
+    margin: 0px 10px 10px  10px;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+}
+.fa
+{
+    color: red;
+    font-weight: bold;
+   
+}   
+.panel{
+    margin: 10px 10px 10px 10px;
+}
+.taskDone{
+    text-emphasis: line-through;
+}
+.tasks{
+    margin: 0px;
+    
+}

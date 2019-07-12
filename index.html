@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>to-do-list</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+
+</head>
+<body >
+    <div id="app"  class="container-fluid">
+        <div class="main">
+            <div class="head"><h1>To-do-list</h1></div>
+
+            <div class="panel panel-default">
+                <form class="row" @submit.prevent="addItem()">
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" v-model="taskInput" > 
+                    </div>
+
+                    <div class="col-sm-4">
+                        <input type="submit" value="add" class="btn btn-primary btn-block">
+                    </div>
+                </form>
+                &nbsp;
+            </div>
+            <div class="content"  v-for="task in tasks">
+                <p class="tasks">
+                    <span :class="{ taskDone: task.done }">
+                    {{task.name}}
+                </span>
+                </p>
+                
+                <i class="fa fa-times" aria-hidden="true" @click="deletetask(task)"></i>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="main.js"></script>
+
+</html>
